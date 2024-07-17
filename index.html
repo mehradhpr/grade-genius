@@ -1,44 +1,47 @@
-<html>
-
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Genius</title>
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <meta></meta>
-    <script></script>
-  </head>
-
-  <body>
+    <script defer src="scripts.js"></script>
+</head>
+<body>
     <div>
-      <h1>Grade Genius</h1>
+        <h1>Grade Genius</h1>
 
-      <div class="province-menu">
-        <h2>Institution</h2>
-        <div class="provice-drop">
-          <p>University of Saskatchewan</p>
+        <div class="province-menu">
+            <h2>Institution</h2>
+            <div class="provices">
+                <p>University of Saskatchewan</p>
+                <p>Grading Scheme Reference</p>
+            </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Courses</h2>
-        <p>Add each course's name and grade in percentage</p>
-        <table>
-          <tr>
-            <th>Course Name</th>
-            <th>Grade in Percentage</th>
-          </tr>
-          <tr>
-            <td>CMPT 360</td>
-            <td>89</td>
-          </tr>
-        </table>
-      </div>
-
+        <div id="courses">
+          <h2>Courses</h2>
+          <p>Add each course's name and grade in percentage</p>
+          <table id="coursesTable">
+            <tr>
+              <th>Course</th>
+              <th>Grade</th>
+            </tr>
+              <tr>
+                <td>CMPT 360</td>
+                <td>89</td>
+              </tr>
+          </table>
+            <div class="add-course">
+              <input type="text" id="courseName" placeholder="Course Name">
+              <input type="number" id="courseGrade" placeholder="Grade" min="0" max="100">
+              <button onclick="addRow()">Add</button>
+            </div>
+        </div>
     </div>
 
     <footer>
-      All Rights Reserved
+        All Rights Reserved
     </footer>
-  </body>
-
+</body>
 </html>
-
