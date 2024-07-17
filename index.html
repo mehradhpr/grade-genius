@@ -8,34 +8,36 @@
     <script defer src="scripts.js"></script>
 </head>
 <body>
-    <div>
+    <div class="main">
         <h1>Grade Genius</h1>
 
         <div class="province-menu">
             <h2>Institution</h2>
-            <div class="provices">
+            <div class="provinces">
                 <p>University of Saskatchewan</p>
-                <p>Grading Scheme Reference</p>
+                <a style="font-size: small;" href="https://students.usask.ca/academics/grades.php">Grading Scheme Reference</a>
             </div>
         </div>
 
-        <div id="courses">
+        <div class="courses">
           <h2>Courses</h2>
           <p>Add each course's name and grade in percentage</p>
           <table id="coursesTable">
             <tr>
               <th>Course</th>
               <th>Grade</th>
+              <th>Credits</th>
             </tr>
-              <tr>
-                <td>CMPT 360</td>
-                <td>89</td>
-              </tr>
           </table>
             <div class="add-course">
-              <input type="text" id="courseName" placeholder="Course Name">
+              <input type="text" id="courseName" placeholder="Course">
               <input type="number" id="courseGrade" placeholder="Grade" min="0" max="100">
+              <input type="number" id="courseCredits" placeholder="Credits" min="1" max="20">
               <button onclick="addRow()">Add</button>
+            </div>
+            <div class="average">
+              <button onclick="calculateCWA()">Cumulative Weighted Average</button>
+              <p id="averageGrade"></p>
             </div>
         </div>
     </div>
